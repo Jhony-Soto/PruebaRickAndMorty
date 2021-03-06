@@ -1,0 +1,28 @@
+<mat-card>
+    <mat-card-title>Iniciar session</mat-card-title>
+    <mat-card-content>
+        <form  >
+            <p>
+                <mat-form-field>
+                <input type="text" matInput placeholder="Username" >
+                </mat-form-field>
+            </p>
+
+            <p>
+                <mat-form-field>
+                <input type="password" matInput placeholder="Password" >
+                </mat-form-field>
+            </p>
+
+            <p  class="error">
+                <!-- {{ error }} -->
+                Error al cargar
+            </p>
+
+            <div class="button">
+                <button mat-raised-button color="primary">Ingresar</button>
+            </div>
+            <a routerLink="/register">Registrarme</a>
+        </form>
+    </mat-card-content>
+</mat-card>
