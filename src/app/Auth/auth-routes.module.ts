@@ -12,8 +12,8 @@ const routesAuth:Routes=[
   { path:'',
     children:[
       {path:'login',component:LoginComponent},
+      {path:'',redirectTo:'login'}, 
       {path:'register',component:RegisterComponent},
-      {path:'**',redirectTo:'login'}
     ]
   }
 ]

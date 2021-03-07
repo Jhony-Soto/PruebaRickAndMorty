@@ -5,7 +5,7 @@ import { AuthRoutesModule } from './auth-routes.module';
 //COMPONENETES
 import { LoginComponent } from '../Auth/Pages/login/login.component';
 import { RegisterComponent } from '../Auth/Pages/register/register.component';
-import { MaterialModule } from '../material.module';
+
 
 
 
@@ -16,7 +16,6 @@ import { MaterialModule } from '../material.module';
   imports: [
     CommonModule,
     AuthRoutesModule,
-    MaterialModule,
   ]
 })
 export class AuthModule { }

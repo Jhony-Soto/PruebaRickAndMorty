@@ -1,28 +1,43 @@
-<mat-card>
-    <mat-card-title>Iniciar session</mat-card-title>
-    <mat-card-content>
-        <form  >
-            <p>
-                <mat-form-field>
-                <input type="text" matInput placeholder="Username" >
-                </mat-form-field>
+<div class="login-page" style="">
+    <div class="login-box">
+        <div class="login-logo text-center">
+          <h1>Rick And Morty</h1>
+        </div>
+        <!-- /.login-logo -->
+        <div class="card">
+          <div class="card-body login-card-body">
+            <p class="login-box-msg">Iniciar Session</p>
+      
+            <form action="../../index3.html" method="post">
+              <div class="input-group mb-3">
+                <input type="email" class="form-control" placeholder="Email">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-envelope"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <input type="password" class="form-control" placeholder="Password">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-lock"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <!-- /.col -->
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+                </div>
+                <!-- /.col -->
+              </div>
+            </form>
+            <p class="mb-0">
+              <a routerLink="/register" class="text-center">Registrarme</a>
             </p>
-
-            <p>
-                <mat-form-field>
-                <input type="password" matInput placeholder="Password" >
-                </mat-form-field>
-            </p>
-
-            <p  class="error">
-                <!-- {{ error }} -->
-                Error al cargar
-            </p>
-
-            <div class="button">
-                <button mat-raised-button color="primary">Ingresar</button>
-            </div>
-            <a routerLink="/register">Registrarme</a>
-        </form>
-    </mat-card-content>
-</mat-card>
+          </div>
+          <!-- /.login-card-body -->
+        </div>
+    </div>
+</div>

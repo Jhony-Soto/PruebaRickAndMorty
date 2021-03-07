@@ -1,42 +1,80 @@
-<mat-card>
-    <mat-card-title>Registro</mat-card-title>
-    <mat-card-content>
-        <form  >
-            <p>
-                <mat-form-field>
-                    <input type="text" matInput placeholder="Documento de Identidad" >
-                </mat-form-field>
-            </p>
-            <p>
-                <mat-form-field>
-                    <input type="text" matInput placeholder="Nombres" >
-                </mat-form-field>
-            </p>
-            <p>
-                <mat-form-field>
-                    <input type="text" matInput placeholder="Apellidos" >
-                </mat-form-field>
-            </p>
-            <p>
-                <mat-form-field>
-                    <input type="Email" matInput placeholder="Email" >
-                </mat-form-field>
-            </p>
-            <p>
-                <mat-form-field>
-                <input type="text" matInput placeholder="Password" >
-                </mat-form-field>
-            </p>
-
-            <p  class="error">
-                <!-- {{ error }} -->
-                Error al cargar
-            </p>
-
-            <div class="button">
-                <button mat-raised-button color="accent">Guardar</button>
+<div class="register-page" >
+    <div class="register-box">
+      <div class="card card-outline card-primary">
+        <div class="card-header text-center">
+            <h1>Rick And Morty</h1>
+        </div>
+        <div class="card-body">
+    
+          <form action="" method="post">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Documento de Identidad">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-user"></span>
+                </div>
+              </div>
             </div>
-            <a routerLink="/login">Iniciar session</a>
-        </form>
-    </mat-card-content>
-</mat-card>
+
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Nombres">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-user"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Apellidos">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-user"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-group mb-3">
+              <input type="email" class="form-control" placeholder="Email">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-envelope"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-group mb-3">
+              <input type="password" class="form-control" placeholder="Password">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-lock"></span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="input-group mb-3">
+              <input type="password" class="form-control" placeholder="Confirmar Contraseña">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-lock"></span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!-- /.col -->
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary btn-block">Registrarme</button>
+              </div>
+              <!-- /.col -->
+            </div>
+          </form>
+    
+          <a routerLink="/login" class="text-center">Iniciar Session</a>
+        </div>
+        <!-- /.form-box -->
+      </div><!-- /.card -->
+    </div>
+    <!-- /.register-box -->
+      
+    
+</div>

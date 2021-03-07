@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MidasoftService } from 'src/app/services/midasoft.service';
+
+
+
 
 @Component({
   selector: 'app-login',
@@ -9,9 +13,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private serviceMidasoft:MidasoftService) { }
 
   ngOnInit(): void {
+    this.registerNewUser()
+  }
+
+  registerNewUser()
+  {
+    console.log(this.serviceMidasoft.registerUser);
+    
   }
 
 }

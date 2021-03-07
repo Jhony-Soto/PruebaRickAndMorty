@@ -24,9 +24,13 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -120,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "rickandmorty"
+  "defaultProject": "rickandmorty",
+  "cli": {
+    "analytics": "88cb86e9-c17f-4c58-a469-a2e2a4692c68"
+  }
 }

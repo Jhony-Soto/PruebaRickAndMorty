@@ -5,6 +5,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
+import {MatListModule} from '@angular/material/list';
+import {MatSidenavModule} from '@angular/material/sidenav';
+
 
 
 
@@ -16,6 +19,8 @@ import {MatInputModule} from '@angular/material/input';
     MatToolbarModule,
     MatCardModule,
     MatInputModule,
+    MatListModule,
+    MatSidenavModule
   ],
   exports:[
     MatButtonModule,
@@ -23,6 +28,8 @@ import {MatInputModule} from '@angular/material/input';
     MatToolbarModule,
     MatCardModule,
     MatInputModule,
+    MatListModule,
+    MatSidenavModule
   ]
 })
 export class MaterialModule { }
