@@ -1,0 +1,22 @@
+
+    <table class="table table-hover table-striped table-bordered table-light">
+      <thead>                  
+        <tr>
+          <th style="width: 10px">#</th>
+          <th>Nombre del Episodio</th>
+          <th>Fecha Emision</th>
+          <th>Personajes</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let item of episodes">
+          <td>{{item.id}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.air_date}}</td>
+          <td><button (click)="personajesByepisodio(item.id)" class="btn btn-outline-info">Personajes <i class="far fa-eye"></i></button></td>
+        </tr>
+        
+      </tbody>
+    </table>
+  

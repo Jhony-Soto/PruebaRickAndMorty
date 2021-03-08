@@ -1,29 +1,61 @@
-<div class="login-page" style="">
+<div class="login-page" >
     <div class="login-box">
-        <div class="login-logo text-center">
-          <h1>Rick And Morty</h1>
-        </div>
         <!-- /.login-logo -->
         <div class="card">
+          <div class="card-header text-center">
+            <img src="../../../../assets/img/logo.png" width="150" height="50" alt="">
+          </div>
           <div class="card-body login-card-body">
             <p class="login-box-msg">Iniciar Session</p>
-      
-            <form action="../../index3.html" method="post">
+
+            <form [formGroup]="formLogin" (ngSubmit)="InitSession()">
               <div class="input-group mb-3">
-                <input type="email" class="form-control" placeholder="Email">
+                <input 
+                  type="email" 
+                  class="form-control" 
+                  placeholder="Email" 
+                  formControlName="username"
+                  [class.is-invalid]="emailField.touched && emailField.invalid"
+                >
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <span class="fas fa-envelope"></span>
                   </div>
                 </div>
               </div>
+              <div  
+                class="alert alert-danger" 
+                role="alert"
+                *ngIf="emailField.touched && emailField.hasError('required')"  
+              >
+                El campo es requerido !
+              </div>
+              <div  
+                class="alert alert-danger" 
+                role="alert"
+                *ngIf="emailField.touched && emailField.hasError('email')"  
+              >
+                El campo es tipo Email!
+              </div>
               <div class="input-group mb-3">
-                <input type="password" class="form-control" placeholder="Password">
+                <input type="password" 
+                  class="form-control" 
+                  placeholder="Password" 
+                  formControlName="password"
+                  [class.is-invalid]="passwordField.touched && passwordField.invalid"
+                >
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <span class="fas fa-lock"></span>
                   </div>
                 </div>
+              </div>
+              <div  
+                class="alert alert-danger" 
+                role="alert"
+                *ngIf="passwordField.touched && passwordField.hasError('required')"  
+              >
+                El campo es requerido !
               </div>
               <div class="row">
                 <!-- /.col -->
@@ -31,6 +63,14 @@
                   <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
                 </div>
                 <!-- /.col -->
+              </div>
+              <br>
+              <div  
+                class="alert alert-danger" 
+                role="alert"
+                *ngIf="errorInitSession"  
+              >
+                {{messageError}}
               </div>
             </form>
             <p class="mb-0">

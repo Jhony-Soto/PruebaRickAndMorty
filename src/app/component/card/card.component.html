@@ -1,0 +1,52 @@
+
+  <div class="card card-widget widget-user-2">
+    <div class="card-header">
+      <div class="widget-user-header d-flex">
+        <div class="widget-user-image">
+          <img class="rounded-circle img-thumbnail" [src]="dataPerson.image"  width="200" height="200">
+        </div>
+        <div class="text-right mr-3">
+          <h3 class="widget-user-username">{{dataPerson.name}}</h3>
+          <h5 class="widget-user-desc">{{dataPerson.species}}</h5>
+        </div>
+      </div>
+    </div>
+    <div class="card-body" *ngIf="tipo=='url'">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          status <span class="float-right badge bg-info">{{dataPerson.status}}</span>
+        </li>
+        <li class="nav-item">
+          type <span class="float-right badge bg-info">{{dataPerson.type}}</span>
+        </li>
+        <li class="nav-item">
+          gender <span class="float-right badge bg-info">{{dataPerson.gender}}</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card-footer text-right" *ngIf="tipo=='url'">
+      <div class="row">
+        <div class="col-10">
+          <div  [class]="errorFavorite != false ? 'alert alert-info' : 'alert alert-success'"  *ngIf="responseFavorite" role="alert">
+            {{messageAlert}} !
+          </div>
+        </div>
+        <div class="col-2">
+          <button class="btn btn-primary rounded-circle" (click)="addFavorite(dataPerson.id)" title="Agregar a Favoritos">
+            <i class="fas fa-heart"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer text-right" *ngIf="tipo!='url'">
+      <div class="row">
+        <div class="col-12">
+          <button class="btn btn-danger rounded-circle" (click)="deleteFavorito(dataPerson.id)" title="Eliminar de mis Favoritos">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>

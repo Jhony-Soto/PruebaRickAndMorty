@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink="/dashboard/episodios">
         <img src="../../../assets/img/logo.png" width="150" height="50" alt="">
       </a>
     
@@ -13,17 +13,21 @@
           <a class="nav-link" routerLink="/dashboard/episodios">Episodios</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" routerLink="/dashboard/personajes">Personajes</a>
-        </li>
-        <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" routerLink="/dashboard/favoritos">Favoritos</a>
         </li>
         
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Buscar Episodio" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-      </form>
+      <ul class="navbar-nav mr-right">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{user.e_MAIL}}
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <button class="dropdown-item" (click)="logOut($event)">Cerrar Session</button>
+          </div>
+        </li>
+
+      </ul>
     </div>
   </nav>
 

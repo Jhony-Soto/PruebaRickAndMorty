@@ -1,1 +1,21 @@
-<p>favoritos works!</p>
+<app-navbar></app-navbar>
+
+    <div class="container my-5">
+        <div class="card card-primary card-outline direct-chat direct-chat-primary">
+            <div class="card-header bg-dark text-light">
+              <h3 class="card-title">
+                <strong>Mis Favoritos  </strong>
+              </h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body bg-secondary">
+                <div class="card-columns">
+                    <app-card [personaje]="item.id_caracter" [tipo]="id" *ngFor="let item of favoritos"></app-card>
+                    
+                </div>
+            </div>
+            <!-- /.card-body -->
+        </div>
+    </div>
+
+

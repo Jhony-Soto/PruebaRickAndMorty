@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { MidasoftService } from 'src/app/services/midasoft.service';
+
 @Component({
   selector: 'app-favoritos',
   templateUrl: './favoritos.component.html',
@@ -8,7 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoritosComponent implements OnInit {
 
-  constructor() { }
+  favoritos:any;
+
+  constructor(
+    private midasoftSvc:MidasoftService
+  ) { 
+
+    this.midasoftSvc.favoritesAll()
+      .subscribe((res:any)=>{
+          this.favoritos=res
+          console.log(this.favoritos);
+      })
+
+  }
 
   ngOnInit(): void {
   }
